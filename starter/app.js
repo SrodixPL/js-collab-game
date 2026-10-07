@@ -67,87 +67,92 @@ function idz(kierunek) {
 // SEKCJA C — PRZEDMIOTY I WYGRANA
 function akcja(co) {
   // TODO C1: zablokuj akcje po koncu gry.
-  if(koniec)
+    if(koniec)
   { 
     console.log("Koniec gry. Akcja zablokowana.");
     return;
   }
 
   // TODO C2: switch: karta / bezpiecznik / napraw / wyjdz.
-  switch(co)
+    switch(co)
   {
     case "karta":
-  if (pokoj !== 1 || karta) {
+     if (pokoj !== 1 || karta) {
     console.log("Tutaj nie ma karty do zabrania.");
     return;
   }
   karta = true;
   console.log("Zabierasz karte.");
-  break;
+   break;
     case "bezpiecznik":
       if(pokoj !== 2)
       {
         console.log("W tym pokoju nie ma bezpiecznika.");
-        return;
+   return;
       }
-    if(bezpiecznik)
+      if(bezpiecznik)
       {
         console.log("Masz już bezpiecznik.");
-        return;
+   return;
       }
       if(zasilanie)
       {
         console.log("Zasilanie zostało już włączone.");
-        return;
+   return;
       }
       bezpiecznik = true;
       console.log("Zabierasz bezpiecznik.")
-  break;
-    case "napraw":
+   break;
+  case "napraw":
       if(pokoj !== 3)
         {
           console.log("W tym pokoju nie ma generatora.");
-          return;
-
+  return;
         }  
+
       if(bezpiecznik == false)
       {
         console.log("Nie posiadasz: bezpiecznik.");
-        return;
+  return;
       }
+
       if(zasilanie)
       {
         console.log("Zasilanie jest już włączone.");
-        return;
+  return;
       }
+
       zasilanie = true;
       bezpiecznik = false;
       console.log("Zasilanie zostało włączone.");
-      break;
-      case "wyjdz":
+  break;
+  case "wyjdz":
       if(pokoj !== 4)
         {
           console.log("W tym pokoju nie ma wyjscia.");
-          return;
+  return;
 
         }  
+
       if(zasilanie == false)
         {
           console.log("Nie ma zasilania.");
-          return;
+  return;
         }
+
         if(karta == false)
         {
         console.log("Nie posiadasz karty.");
-          return;
+  return;
 
         }
+        
         wygrana = true;
         koniec = true;
-        break;
-      default:
-        return;
-      break;
+  break;
+  default:
+  return;
+  break;
   }
   zakonczTure();
 
