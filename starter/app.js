@@ -115,7 +115,95 @@ function idz(kierunek) {
 // SEKCJA C — PRZEDMIOTY I WYGRANA
 function akcja(co) {
   // TODO C1: zablokuj akcje po koncu gry.
+    if(koniec)
+  { 
+    console.log("Koniec gry. Akcja zablokowana.");
+    return;
+  }
+
   // TODO C2: switch: karta / bezpiecznik / napraw / wyjdz.
+    switch(co)
+  {
+    case "karta":
+     if (pokoj !== 1 || karta) {
+    console.log("Tutaj nie ma karty do zabrania.");
+    return;
+  }
+  karta = true;
+  console.log("Zabierasz karte.");
+   break;
+    case "bezpiecznik":
+      if(pokoj !== 2)
+      {
+        console.log("W tym pokoju nie ma bezpiecznika.");
+   return;
+      }
+      if(bezpiecznik)
+      {
+        console.log("Masz już bezpiecznik.");
+   return;
+      }
+      if(zasilanie)
+      {
+        console.log("Zasilanie zostało już włączone.");
+   return;
+      }
+      bezpiecznik = true;
+      console.log("Zabierasz bezpiecznik.")
+   break;
+  case "napraw":
+      if(pokoj !== 3)
+        {
+          console.log("W tym pokoju nie ma generatora.");
+  return;
+        }  
+
+      if(bezpiecznik == false)
+      {
+        console.log("Nie posiadasz: bezpiecznik.");
+  return;
+      }
+
+      if(zasilanie)
+      {
+        console.log("Zasilanie jest już włączone.");
+  return;
+      }
+
+      zasilanie = true;
+      bezpiecznik = false;
+      console.log("Zasilanie zostało włączone.");
+  break;
+  case "wyjdz":
+      if(pokoj !== 4)
+        {
+          console.log("W tym pokoju nie ma wyjscia.");
+  return;
+
+        }  
+
+      if(zasilanie == false)
+        {
+          console.log("Nie ma zasilania.");
+  return;
+        }
+
+        if(karta == false)
+        {
+        console.log("Nie posiadasz karty.");
+  return;
+
+        }
+        
+        wygrana = true;
+        koniec = true;
+  break;
+  default:
+  return;
+  break;
+  }
+  zakonczTure();
+
   // TODO C2: przed zmiana sprawdz pokoj i wymagany stan.
   // TODO C3: przy odrzuceniu return; przy sukcesie break.
   // TODO C3: po switch jedno zakonczTure().
