@@ -140,10 +140,14 @@ function rozejrzyj() {
   }
 }
 
+function blokuj() {
+  console.log("Koniec gry. Akcja zablokowana.");
+}
+
 // SEKCJA B — RUCH
 function idz(kierunek) {
   if (koniec) {
-    console.log("Koniec gry. Odśwież kartę żeby zagrać ponownie.")
+    blokuj()
     return
   }
 
@@ -172,14 +176,12 @@ function idz(kierunek) {
 
 // SEKCJA C — PRZEDMIOTY I WYGRANA
 function akcja(co) {
-  // TODO C1: zablokuj akcje po koncu gry.
     if(koniec)
   { 
-    console.log("Koniec gry. Akcja zablokowana.");
+    blokuj()
     return;
   }
 
-  // TODO C2: switch: karta / bezpiecznik / napraw / wyjdz.
     switch(co)
   {
     case "karta":
@@ -257,16 +259,10 @@ function akcja(co) {
         koniec = true;
   break;
   default:
-  return;
-  break;
+    console.log("Nieprawidlowa akcja.");
+    return;
   }
   zakonczTure();
-
-  // TODO C2: przed zmiana sprawdz pokoj i wymagany stan.
-  // TODO C3: przy odrzuceniu return; przy sukcesie break.
-  // TODO C3: po switch jedno zakonczTure().
-  // TODO C4: wygrana i koniec ustawione przed rozliczeniem tury!
-  console.log("Akcje do uzupelnienia");
 }
 
 start();
