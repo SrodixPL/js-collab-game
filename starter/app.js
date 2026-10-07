@@ -57,11 +57,33 @@ function rozejrzyj() {
 
 // SEKCJA B — RUCH
 function idz(kierunek) {
-  // TODO B1: zablokuj ruch po koncu gry.
-  // TODO B2: switch kierunku; oblicz kandydat na nowy pokoj.
-  // TODO B3: odrzuc pokoj poza 1..4 i nieznany kierunek bez kosztu.
-  // TODO B4: zapisz poprawny pokoj, rozejrzyj(), zakonczTure().
-  console.log("Ruch do uzupelnienia");
+  if (koniec) {
+    console.log("Koniec gry. Odśwież kartę żeby zagrać ponownie.")
+    return
+  }
+
+  let nastepnyPokoj = 0
+
+  switch (kierunek) {
+    case "lewo":
+      if (pokoj === 1) { console.log("Na lewo jest ściana.") return }
+      nastepnyPokoj = pokoj - 1
+      break
+
+    case "prawo":
+      if (pokoj === 4) { console.log("Na prawo jest ściana.") return }
+      nastepnyPokoj = pokoj + 1
+      break
+
+    default:
+      console.log("Nieprawidłowy kierunek. Spróbuj \"prawo\" lub \"lewo\".")
+      return
+  }
+
+  energia--
+  pokoj = nastepnyPokoj
+  rozejrzyj()
+  zakonczTure()
 }
 
 // SEKCJA C — PRZEDMIOTY I WYGRANA
