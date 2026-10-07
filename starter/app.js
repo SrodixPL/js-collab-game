@@ -80,7 +80,6 @@ function idz(kierunek) {
       return
   }
 
-  energia--
   pokoj = nastepnyPokoj
   rozejrzyj()
   zakonczTure()
