@@ -17,7 +17,21 @@ function start() {
   zasilanie = false;
   koniec = false;
   wygrana = false;
-  console.log("UCIECZKA Z SERWEROWNI. Zasilanie awaryjne wystarczy na 10 tur.");
+console.log("╔══════════════════════════════════════════════════════╗");
+console.log("║                  C O N S O L E   L O G               ║");
+console.log("╠══════════════════════════════════════════════════════╣");
+console.log("║                                                      ║");
+console.log("║  [12:04:17] SYSTEM     :: WARNING                    ║");
+console.log("║  [12:04:18] SECURITY   :: BREACH DETECTED            ║");
+console.log("║  [12:04:19] SERVER     :: CONNECTION LOST            ║");
+console.log("║                                                      ║");
+console.log("║  >>> U C I E C Z K A   Z   S E R W E R O W N I <<<   ║");
+console.log("║                                                      ║");
+console.log("║  [12:04:23] EXIT       :: ACCESS DENIED              ║");
+console.log("║  [12:04:24] SYS POWER  :: 10 tur                     ║");
+console.log("║                                                      ║");
+console.log("╚══════════════════════════════════════════════════════╝");
+
   pomoc();
   rozejrzyj();
 }
@@ -46,10 +60,30 @@ function status() {
   // TODO A3: wypisz pokoj, energie, przedmioty, zasilanie i stan gry.
   console.log("Status do uzupelnienia");
 }
-function mapa() {
-  // TODO A2: petla for od 1 do 4; nazwa i znacznik aktualnego pokoju.
-  console.log("Mapa do uzupelnienia");
+function nazwaPokoju(numer) {
+  switch (numer) {
+    case 1:
+      return "Recepcja";
+    case 2: 
+      return "Magazyn";
+    case 3: 
+      return "Serwerownia";
+    case 4:
+      return "Wyjscie"
+    default:
+      return "Nieznane pomieszczenie";
+  }
 }
+
+function mapa() {
+    for (let i = 1; i <= 4; i++) {
+        console.log(
+            `${i} ${nazwaPokoju(i)} ${i === pokoj ? "<-- jesteś tutaj" : ""}`
+        );
+    }
+}
+
+
 function rozejrzyj() {
   // TODO A4: switch(pokoj); opis zgodny ze stanem przedmiotow.
   console.log("Opis pokoju do uzupelnienia");
