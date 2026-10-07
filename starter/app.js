@@ -17,6 +17,9 @@ function start() {
   zasilanie = false;
   koniec = false;
   wygrana = false;
+
+// Jebac cie dworek
+// Zabij sie z tym AI slopem
 console.log("╔══════════════════════════════════════════════════════╗");
 console.log("║                  C O N S O L E   L O G               ║");
 console.log("╠══════════════════════════════════════════════════════╣");
