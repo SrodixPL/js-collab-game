@@ -48,17 +48,31 @@ function zakonczTure() {
 }
 
 // SEKCJA A — INFORMACJE I MAPA
-function nazwaPokoju(numer) {
-  // TODO A1: switch; zwroc nazwe pokoju jako tekst.
-  return "Nazwa do uzupelnienia";
-}
 function pomoc() {
-  console.log('Dostepne: start(), pomoc(), status(), mapa(), rozejrzyj(), idz("prawo"), akcja("karta")');
-  // TODO A5: dopisz pozostale kierunki i akcje oraz zasade kosztu.
+  console.log("Dostepne komendy:");
+  console.log('start()');
+  console.log('pomoc()');
+  console.log('status()');
+  console.log('mapa()');
+  console.log('rozejrzyj()');
+  console.log('idz("prawo")');
+  console.log('idz("lewo")');
+  console.log('akcja("karta")');
+  console.log('akcja("bezpiecznik")');
+  console.log('akcja("napraw")');
+  console.log('akcja("wyjdz")');
+  console.log("Ruch i udane akcje kosztuja 1 energie.");
+  console.log("Czytanie informacji nie zuzywa energii.");
 }
 function status() {
-  // TODO A3: wypisz pokoj, energie, przedmioty, zasilanie i stan gry.
-  console.log("Status do uzupelnienia");
+  console.log("=== STATUS ===");
+  console.log("Pokoj: " + nazwaPokoju(pokoj));
+  console.log("Energia: " + energia);
+  console.log("Karta: " + (karta ? "tak" : "nie"));
+  console.log("Bezpiecznik: " + (bezpiecznik ? "tak" : "nie"));
+  console.log("Zasilanie: " + (zasilanie ? "dziala" : "nie dziala"));
+  console.log("Stan gry: " + (koniec ? "zakonczona" : "trwa"));
+  console.log("Wygrana: " + (wygrana ? "tak" : "nie"));
 }
 function nazwaPokoju(numer) {
   switch (numer) {
