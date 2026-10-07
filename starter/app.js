@@ -99,8 +99,42 @@ function mapa() {
 
 
 function rozejrzyj() {
-  // TODO A4: switch(pokoj); opis zgodny ze stanem przedmiotow.
-  console.log("Opis pokoju do uzupelnienia");
+  switch (pokoj) {
+    case 1:
+      console.log("Jestes w Recepcji.");
+      if (!karta) {
+        console.log("Na biurku lezy karta dostepu.");
+      } else {
+        console.log("Na biurku nie ma juz karty.");
+      }
+      break;
+
+    case 2:
+      console.log("Jestes w Magazynie.");
+      if (!bezpiecznik && !zasilanie) {
+        console.log("Na polce lezy bezpiecznik.");
+      } else {
+        console.log("Na polce nie ma bezpiecznika.");
+      }
+      break;
+
+    case 3:
+      console.log("Jestes w Serwerowni.");
+      if (zasilanie) {
+        console.log("Zasilanie dziala.");
+      } else {
+        console.log("Zasilanie nie dziala.");
+      }
+      break;
+
+    case 4:
+      console.log("Jestes przy Wyjsciu.");
+      console.log("Do wyjscia potrzebujesz karty i sprawnego zasilania.");
+      break;
+
+    default:
+      console.log("Nieznane pomieszczenie.");
+  }
 }
 
 // SEKCJA B — RUCH
