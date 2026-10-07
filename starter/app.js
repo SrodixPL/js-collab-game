@@ -66,12 +66,12 @@ function idz(kierunek) {
 
   switch (kierunek) {
     case "lewo":
-      if (pokoj === 1) { console.log("Na lewo jest ściana.") return }
+      if (pokoj === 1) { console.log("Na lewo jest ściana."); return }
       nastepnyPokoj = pokoj - 1
       break
 
     case "prawo":
-      if (pokoj === 4) { console.log("Na prawo jest ściana.") return }
+      if (pokoj === 4) { console.log("Na prawo jest ściana."); return }
       nastepnyPokoj = pokoj + 1
       break
 
