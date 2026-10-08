@@ -118,9 +118,9 @@ Po wykonaniu wszystkich wymaganych czynności w odpowiedniej kolejności gracz m
 **WYNIK OCZEKIWANY:**
 Po 10 poprawnych ruchach energia spada do 0 i następuje porażka. Gra informuje o przegranej. Jedenasty ruch nie zmienia pozycji, energii ani pozostałych danych.
 
-**WYNIK OTRZYMANY:** Do uzupełnienia po teście.
+**WYNIK OTRZYMANY:** Gra po skonczeniu energii konczy sie, jedyną opcją pozostaje funkcja start();
 
-**KTO SPRAWDZAŁ:** Do uzupełnienia.
+**KTO SPRAWDZAŁ:** Dworek
 
 ---
 
@@ -136,6 +136,6 @@ Po 10 poprawnych ruchach energia spada do 0 i następuje porażka. Gra informuje
 **WYNIK OCZEKIWANY:**
 Ponowne wywołanie `start()` całkowicie resetuje grę. Energia wraca do wartości początkowej, gracz znajduje się w pokoju 1, ekwipunek jest pusty, wszystkie flagi wracają do wartości początkowych, a licznik ruchów zostaje wyzerowany.
 
-**WYNIK OTRZYMANY:** Do uzupełnienia po teście.
+**WYNIK OTRZYMANY:** wszystkie zmienne sie resetuja po uzyciu funkcji start()
 
-**KTO SPRAWDZAŁ:** Do uzupełnienia.
+**KTO SPRAWDZAŁ:** Dworek
