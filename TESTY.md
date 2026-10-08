@@ -63,9 +63,9 @@ Gracz przechodzi z pokoju 1 do pokoju 2. Energia zmniejsza się dokładnie o 1 p
 **WYNIK OCZEKIWANY:**
 Przedmiot można zabrać tylko jeden raz. Druga próba nie dodaje kolejnego egzemplarza do ekwipunku i nie zmienia stanu gry.
 
-**WYNIK OTRZYMANY:** Do uzupełnienia po teście.
+**WYNIK OTRZYMANY:** Wynik oczekiwany. Bezpiecznik został zebrany i dodany do ekwipunku. Po kolejnej próbie zebrania bezpiecznika wyskakuje feedback "Masz już bezpiecznik". Stan ekwipunku po próbie ponownego zebranie się nie zmienia, stan gry również się nie zmienia.
 
-**KTO SPRAWDZAŁ:** Do uzupełnienia.
+**KTO SPRAWDZAŁ:** JakBor3k.
 
 ---
 
@@ -81,9 +81,9 @@ Przedmiot można zabrać tylko jeden raz. Druga próba nie dodaje kolejnego egze
 **WYNIK OCZEKIWANY:**
 Bez bezpiecznika nie można naprawić zasilania. Drzwi nie otwierają się, dopóki nie zostaną spełnione oba wymagania. Nieudane próby nie zmieniają odpowiednich flag.
 
-**WYNIK OTRZYMANY:** Do uzupełnienia po teście.
+**WYNIK OTRZYMANY:** Bez bezpiecznika nie można naprawić zasilania, wyskakuje feedback o braku bezpiecznika. Drzwi nie otwierają się, dopóki nie zostaną spełnione oba warunki, wyskakuje feedback o braku zasilania lub braku bezpiecznika. W  ielokrotne próby nie zmieniają wyniku.
 
-**KTO SPRAWDZAŁ:** Do uzupełnienia.
+**KTO SPRAWDZAŁ:** JakBor3k.
 
 ---
 
@@ -100,9 +100,9 @@ Bez bezpiecznika nie można naprawić zasilania. Drzwi nie otwierają się, dop�
 **WYNIK OCZEKIWANY:**
 Po wykonaniu wszystkich wymaganych czynności w odpowiedniej kolejności gracz może otworzyć drzwi i wygrać przed wyczerpaniem energii. Gra wyświetla informację o zwycięstwie.
 
-**WYNIK OTRZYMANY:** Do uzupełnienia po teście.
+**WYNIK OTRZYMANY:** Po wykonaniu wszystkich wymaganych czynności w odpowiedniej kolejności gracz może otworzyć drzwi i wygrać przed wyczerpaniem energii. Gra wyświetla informację o zwycięstwie
 
-**KTO SPRAWDZAŁ:** Do uzupełnienia.
+**KTO SPRAWDZAŁ:** JakBor3k.
 
 ---
 
