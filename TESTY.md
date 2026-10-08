@@ -11,9 +11,9 @@
 **WYNIK OCZEKIWANY:**
 Mapa zawiera 4 pokoje, z których tylko 1 jest zaznaczony jako aktualny. Wyświetlanie mapy i informacji nie zużywa energii ani nie zmienia stanu gry.
 
-**WYNIK OTRZYMANY:** Do uzupełnienia po teście.
+**WYNIK OTRZYMANY:** 4 pokoje, 1 zaznaczony, uzywanie informacjii nie zużywa energii.
 
-**KTO SPRAWDZAŁ:** Do uzupełnienia.
+**KTO SPRAWDZAŁ:** Srodix
 
 ---
 
@@ -28,9 +28,9 @@ Mapa zawiera 4 pokoje, z których tylko 1 jest zaznaczony jako aktualny. Wyświe
 **WYNIK OCZEKIWANY:**
 Gracz pozostaje w pokoju 1. Energia, pozycja i pozostałe dane nie zmieniają się. Niepoprawne ruchy nie są naliczane.
 
-**WYNIK OTRZYMANY:** Do uzupełnienia po teście.
+**WYNIK OTRZYMANY:** Ruch w lewo został anulowany, niepoprawna wartość odrzucona. Energia nie została wykorzystana.
 
-**KTO SPRAWDZAŁ:** Do uzupełnienia.
+**KTO SPRAWDZAŁ:** Srodix
 
 ---
 
@@ -43,11 +43,11 @@ Gracz pozostaje w pokoju 1. Energia, pozycja i pozostałe dane nie zmieniają si
 4. Ponownie sprawdzić pozycję i energię.
 
 **WYNIK OCZEKIWANY:**
-Gracz przechodzi z pokoju 1 do pokoju 2. Energia zmniejsza się dokładnie o 1 punkt. Licznik poprawnych ruchów zwiększa się o 1.
+Gracz przechodzi z pokoju 1 do pokoju 2. Energia zmniejsza się dokładnie o 1 punkt.
 
-**WYNIK OTRZYMANY:** Do uzupełnienia po teście.
+**WYNIK OTRZYMANY:** Przejście między pokojami zużywa tylko 1 energię.
 
-**KTO SPRAWDZAŁ:** Do uzupełnienia.
+**KTO SPRAWDZAŁ:** Srodix
 
 ---
 
